@@ -25,11 +25,14 @@
 		<md-progress-circular md-mode='indeterminate' ng-show="vm.loading" ng-disabled="!vm.loading" md-diameter="120"></md-progress-circular>
 		<div ng-show="!vm.loading" class="info-container" flex layout="column" layout="center center">
 			<div class="user-name">
-				<h3 class="md-display-3">Our very happy customer:</h3>
-				<h2 class="md-display-4">{{vm.userInfo.customerFirstName}} </h2>
+				<h2 class="md-display-4">{{vm.userInfo.customerFirstName | uppercase}} </h2>
+			</div>
+			<div class="tour-name">
+				<p class="md-headline">It's taking the tour:</p>
+				<h2 class="md-display-3">{{vm.userInfo.activityTitle}}</h2>
 			</div>
 			<div flex layout="row" layout-xs="column" layout-align="space-between start">
-				<place-info activity-name="vm.userInfo.activityTitle" image="vm.userInfo.activityPictureUrl"></place-info>
+				<place-info activity-name="vm.userInfo.activityTitle" image="vm.userInfo.activityPictureUrl" is-loading="vm.loading"></place-info>
 				<div class="map-container">
 					<h2 class="md-headline"><md-icon>beenhere</md-icon><br>It is right here:</h2>
 					<div id="map"></div> 

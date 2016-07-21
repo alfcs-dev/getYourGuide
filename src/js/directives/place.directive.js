@@ -21,7 +21,8 @@
             restrict: 'AE',
             scope: {
             	image: '=',
-            	activityName: '='
+            	activityName: '=',
+                isLoading :'='
             },
             templateUrl: 'dist/templates/place.html'
         };

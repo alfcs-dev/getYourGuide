@@ -11,6 +11,7 @@ Web application that displays current activity from customers
 2. Install node dependencies with __npm install__.
 3. Install bower dependencies with **bower install**.
 4. Run Grunt to see it work (Has two options): 
+
 	a. If you run only grunt (default task) you will get a version running minified javascript files
 	b. If you want to change and debug something you can run **grunt dev** which creates a js file version that allows you to debug.
 

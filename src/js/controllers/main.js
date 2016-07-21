@@ -5,10 +5,10 @@
         .module('app')
         .controller('mainCtrl', mainCtrl);
 
-    mainCtrl.$inject = ['dataService', '$interval'];
+    mainCtrl.$inject = ['dataService', '$interval', '$scope', '$timeout'];
 
     /* @ngInject */
-    function mainCtrl(dataService, $interval) {
+    function mainCtrl(dataService, $interval, $scope, $timeout) {
         var vm = this;
         vm.title = 'mainCtrl';
         vm.userInfo = {};
@@ -21,16 +21,21 @@
             vm.counter += 1;
         }, 300);
         ////////////////
+        $scope.$watch('vm.loading', function(newValue, oldValue){
+
+            if(!newValue){
+                console.log('I am here');
+                $timeout(initMap, 500);
+            }
+        });
 
         function activate() {
+            vm.loading = true;
             vm.counter = 0;
             var resp = dataService.getInfo();
             resp
                 .then(function(data) {
                     vm.userInfo = data;
-                    vm.loading = false;
-                    initMap();
-                    console.log(data);
                 })
                 .catch(function(error) {
                     console.log(error);
@@ -45,7 +50,7 @@
             }
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: latLang,
-                zoom: 10
+                zoom: 13
             });
             var marker = new google.maps.Marker({
                 position: latLang,
