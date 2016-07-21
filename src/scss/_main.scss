@@ -6,9 +6,9 @@ html{
 html, body{
 	margin: 0;
 	padding: 0;
+    background-color: $basicColor;
 }
 body{
-	background-color: $basicColor;
 	display: flex;
   	min-height: 100vh;
   	flex-direction: column;
@@ -22,7 +22,7 @@ header{
 main{
 	flex: 1 0 auto; 
 	width: 75vw;
-	margin: 0 auto;
+	margin: -130px auto 0 auto;
 	align-items: center;
     justify-content: center;
     flex-direction: column;

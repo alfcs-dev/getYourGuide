@@ -1,10 +1,18 @@
 place-info{
 	img{
 		max-width: 650px;
+		border-radius: 10px;
 	}
 
-	h3{
+	h2{
+		box-shadow: 10px 14px 31px -9px rgba(0,0,0,0.75);
 		text-align: center;
+		background: $white;
+    	text-align: center;
+    	border-radius: 9px;
 	}
     min-height: 540px;
+    .place-container{
+       margin-top: -25px;
+   	}
 }

@@ -167,8 +167,8 @@
 		grunt.registerTask('css', ['sass', 'cssmin', 'clean:css']);
 		grunt.registerTask('html', ['htmlmin', 'ngtemplates']);
 
-		grunt.registerTask('default', ['uglify:vendor', 'js', 'html', 'css', 'connect:server']);
-		grunt.registerTask('dev', ['uglify:vendor', 'jsdev', 'html', 'css', 'connect:watcher', 'watch']);
+		grunt.registerTask('default', ['uglify:vendor', 'js', 'html', 'css', 'imagemin', 'connect:server']);
+		grunt.registerTask('dev', ['uglify:vendor', 'jsdev', 'html', 'css', 'imagemin',  'connect:watcher', 'watch']);
 
 	};
 })();

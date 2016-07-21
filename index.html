@@ -15,17 +15,25 @@
 
 <body ng-controller="mainCtrl as vm">
 	<header>
-		<nav> <img src="dist/img/gyg-logo.svg"/></nav>
+		<nav> 
 		<md-progress-linear md-mode="determinate" value="{{vm.counter}}"></md-progress-linear>
+		<img src="dist/img/gyg-logo.svg"/> 
+		</nav>
+		
 	</header>
     <main >
 		<md-progress-circular md-mode='indeterminate' ng-show="vm.loading" ng-disabled="!vm.loading" md-diameter="120"></md-progress-circular>
 		<div ng-show="!vm.loading" class="info-container" flex layout="column" layout="center center">
 			<div class="user-name">
-				<h2 class="md-display-4">{{vm.userInfo.customerFirstName}}</h2></div>
+				<h3 class="md-display-3">Our very happy customer:</h3>
+				<h2 class="md-display-4">{{vm.userInfo.customerFirstName}} </h2>
+			</div>
 			<div flex layout="row" layout-xs="column" layout-align="space-between start">
 				<place-info activity-name="vm.userInfo.activityTitle" image="vm.userInfo.activityPictureUrl"></place-info>
-			<div id="map"></div> 
+				<div class="map-container">
+					<h2 class="md-headline"><md-icon>beenhere</md-icon><br>It is right here:</h2>
+					<div id="map"></div> 
+				</div>
 			</div>
 		</div> 
 
