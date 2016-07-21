@@ -9,9 +9,9 @@
 
     /* @ngInject */
     function userPlace() {
-        // Usage:
-        //
-        // Creates:
+        // Usage: Displays a basic introduction text and the picture corresponding the tour 
+        //        the customer is taking
+        // Creates: New DOM element with a title and an image, which are styled in _place.scss
         //
         var directive = {
             bindToController: true,
@@ -33,9 +33,7 @@
     }
 
     /* @ngInject */
-    function PlaceCtrl() {
-    	var vm = this;
-    	
-
+    function PlaceCtrl() { //Create controller incase we want to add functionallity to our directive later
+    	var vm = this; 
     }
 })();
