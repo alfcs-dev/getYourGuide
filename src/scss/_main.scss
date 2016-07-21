@@ -1,0 +1,46 @@
+html{
+	min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: $basicColor;
+	display: flex;
+  	min-height: 100vh;
+  	flex-direction: column;
+}
+
+header{
+	width: 75vw;
+	margin: 0 auto;
+}
+
+main{
+	flex: 1 0 auto; 
+	width: 75vw;
+	margin: 0 auto;
+	align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    .info-container{
+        width: 100%;
+    }
+}
+
+
+footer{
+    min-height: 250px;
+    background-color: $footerBackground;
+    color: $footerColor;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    p {
+        text-align: center;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-cloak>
+
+<head>
+    <title>Get Your Guide Excercise</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="dist/img/favicon.ico">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.9/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="dist/css/styles.min.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="mainCtrl as vm">
+	<header>
+		<nav> <img src="dist/img/gyg-logo.svg"/></nav>
+		<md-progress-linear md-mode="determinate" value="{{vm.counter}}"></md-progress-linear>
+	</header>
+    <main >
+		<md-progress-circular md-mode='indeterminate' ng-show="vm.loading" ng-disabled="!vm.loading" md-diameter="120"></md-progress-circular>
+		<div ng-show="!vm.loading" class="info-container" flex layout="column" layout="center center">
+			<div class="user-name">
+				<h2 class="md-display-4">{{vm.userInfo.customerFirstName}}</h2></div>
+			<div flex layout="row" layout-xs="column" layout-align="space-between start">
+				<place-info activity-name="vm.userInfo.activityTitle" image="vm.userInfo.activityPictureUrl"></place-info>
+			<div id="map"></div> 
+			</div>
+		</div> 
+
+
+    </main>
+    <footer>
+  		<p>&copy; GetYourGuide</p>
+	</footer>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF0BIAyccmbuTWjX9biHV-e2ggFQGaaOM"
+        defer></script>
+    <script src="dist/js/vendor.js"></script>
+	<script src="dist/js/getYourGuideApp.js"></script>
+	<script src="dist/js/templates.js"></script>
+
+	<!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF0BIAyccmbuTWjX9biHV-e2ggFQGaaOM&callback=initMap" async defer-->
+    </script>
+</body>
+
+</html>

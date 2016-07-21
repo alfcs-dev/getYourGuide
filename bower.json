@@ -1,0 +1,32 @@
+{
+  "name": "getyourguide-project",
+  "description": "Get Your Guide Excercise,",
+  "main": "dist/js/getYourGuideApp.js",
+  "authors": [
+    "Alfredo Castañeda"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "GetYourGuide",
+    "js",
+    "maps",
+    "location"
+  ],
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-animate": "^1.5.7",
+    "angular-aria": "^1.5.7",
+    "angular-messages": "^1.5.7",
+    "angular-material": "^1.0.9"
+    
+  }
+}
