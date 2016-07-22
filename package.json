@@ -13,6 +13,10 @@
     "location"
   ],
   "author": "Alfredo Castañeda",
+  "repository" :  { 
+      "type" : "git",
+      "url" : "https://github.com/hobbit1mx/getYourGuide.git"
+  }
   "license": "ISC",
   "devDependencies": {
     "grunt": "^1.0.1",
